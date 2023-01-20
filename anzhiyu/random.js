@@ -1,1 +1,1 @@
-var posts=["posts/Github-Page和Hexo-Butterfly主题搭建个人博客.html","posts/Win10去除资源管理器导航窗格多余的文件夹（3D对象、桌面、图片等）.html","posts/Hexo搭建过程.html","posts/mklink教程.html","posts/教程.html"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
+var posts=["posts/Github-Page和Hexo-Butterfly主题搭建个人博客.html","posts/Hexo搭建过程.html","posts/Win10去除资源管理器导航窗格多余的文件夹（3D对象、桌面、图片等）.html","posts/mklink教程.html","posts/教程.html"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};

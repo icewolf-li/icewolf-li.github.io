@@ -5,7 +5,7 @@
   font-weight: lighter;
 } */
 /* icon引用 */
-@import "//at.alicdn.com/t/c/font_3654872_p141ldqv97.css";
+@import "//at.alicdn.com/t/c/font_3654872_7gwqe9gen34.css";
 
 @font-face {
     font-family: ZhuZiAYuanJWD;
@@ -37,6 +37,11 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
+  /* 菜单栏图标 */
+  .menus_items .iconfont{
+    font-size: 16px;
+  }
+
   /* 时间轴生肖icon */
   svg.icon {
     /* 这里定义svg.icon，避免和Butterfly自带的note标签冲突 */
