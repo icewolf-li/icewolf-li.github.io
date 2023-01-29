@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>java静态方法和非静态方法的区别</title>
+      <link href="/posts/java%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E5%92%8C%E9%9D%9E%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E7%9A%84%E5%8C%BA%E5%88%AB.html"/>
+      <url>/posts/java%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E5%92%8C%E9%9D%9E%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E7%9A%84%E5%8C%BA%E5%88%AB.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Java的方法主要分三类"><a href="#Java的方法主要分三类" class="headerlink" title="Java的方法主要分三类"></a>Java的方法主要分三类</h1><p>1.构造方法<br>2.非静态方法（普通方法&#x2F;实例方法）<br>3.静态方法（类方法）</p><h2 id="静态方法和非静态方法的区别（调用对象、引用变量不同）"><a href="#静态方法和非静态方法的区别（调用对象、引用变量不同）" class="headerlink" title="静态方法和非静态方法的区别（调用对象、引用变量不同）"></a>静态方法和非静态方法的区别（调用对象、引用变量不同）</h2><p>静态方法：使用static关键字修饰的方法,如下图<span class="hide-inline"><button type="button" class="hide-button" style="background-color: blue;color: white">点击查看  </button><span class="hide-content">借用了菜鸟教程</span></span><br><img src="https://www.runoob.com/wp-content/uploads/2013/12/D53C92B3-9643-4871-8A72-33D491299653.jpg"></p><h3 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h3><p>静态方法属于<strong>类</strong>，就是说可以直接通过<strong>类名.方法名</strong>调用的方法（静态属性也可以通过类名调用）</p><div class="note success simple"><p><strong>可以</strong>：调用<strong>静态方法</strong>,引用<strong>类变量</strong>（即，static修饰的变量）。</p></div><div class="note danger simple"><p><strong>不可以</strong>：调用<strong>非静态方法</strong>，引用<strong>类变量</strong>，使用<code>super</code>和<code>this</code>关键字</p></div><h3 id="非静态方法"><a href="#非静态方法" class="headerlink" title="非静态方法"></a>非静态方法</h3><p>方法属于<strong>对象</strong>，必须new一个对象出来，再通过对象调用<br>比如Scanner的nextLine方法</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">scanner.nextLine();</span><br></pre></td></tr></table></figure><div class="note success simple"><p><strong>可以</strong>：调用<strong>静态方法</strong>&#x2F;<strong>普通方法</strong>，引用类变量和成员变量，使用<code>super</code>和<code>this</code>关键字。</p></div><h2 id="调用区别"><a href="#调用区别" class="headerlink" title="调用区别"></a>调用区别</h2><p>静态方法可以直接调用，类名调用和对象调用。（<strong>类名.方法名</strong> &#x2F; <strong>对象名.方法名</strong>）<br>但是非静态方法只能通过对象调用。（<strong>对象名.方法名</strong>）</p><h2 id="静态变量的好处"><a href="#静态变量的好处" class="headerlink" title="静态变量的好处"></a>静态变量的好处</h2><div class="note green icon-padding modern"><i class="note-icon fas fa-battery-half"></i><p>1.属于类级别的，不需要创建对象就可以直接使用.<br>2.全局唯一，内存中唯一，静态变量可以唯一标识某些状态.<br>3.在类加载时候初始化，常驻在内存中，调用快捷方便.</p><p>应用场景：<br>1.静态方法最适合工具类中方法的定义；比如文件操作，日期处理方法等.<br>2.静态方法适合入口方法的定义；如单例模式，因为从外部拿不到构造函数，所有定义一个静态的方法获取对象非常有必要.<br>3.静态变量适合全局变量的定义.（如布尔型静态成员变量做控制符）</p></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>aplayer音乐失效和gitcalendar贡献图失效的解决办法</title>
       <link href="/posts/aplayer%E9%9F%B3%E4%B9%90%E5%A4%B1%E6%95%88%E5%92%8Cgitcalendar%E8%B4%A1%E7%8C%AE%E5%9B%BE%E5%A4%B1%E6%95%88%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95.html"/>
       <url>/posts/aplayer%E9%9F%B3%E4%B9%90%E5%A4%B1%E6%95%88%E5%92%8Cgitcalendar%E8%B4%A1%E7%8C%AE%E5%9B%BE%E5%A4%B1%E6%95%88%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95.html</url>
