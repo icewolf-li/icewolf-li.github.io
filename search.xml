@@ -4,6 +4,50 @@
   
     
     <entry>
+      <title>Sat Feb 18 2023 04:25:38 GMT+0000 (Coordinated Universal Time)</title>
+      <link href="/posts/23-2-18.html"/>
+      <url>/posts/23-2-18.html</url>
+      
+        <content type="html"><![CDATA[<p>花了两个小时，不打算弄太复杂的</p><p>这只是个测试用的，等有空就把日记本上的有趣的全搬到博客上</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日记 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo指定文章不在首页显示</title>
+      <link href="/posts/hexo%E6%8C%87%E5%AE%9A%E6%96%87%E7%AB%A0%E4%B8%8D%E5%9C%A8%E9%A6%96%E9%A1%B5%E6%98%BE%E7%A4%BA.html"/>
+      <url>/posts/hexo%E6%8C%87%E5%AE%9A%E6%96%87%E7%AB%A0%E4%B8%8D%E5%9C%A8%E9%A6%96%E9%A1%B5%E6%98%BE%E7%A4%BA.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>有事候转载一些大佬的文章，但是又不想放在首页，也有点影响美观或者想单独开一个日记页面，但是又有了即刻短文，没必要做的那么好，所以我打算用分类单独开个日记页面（主要是日常习惯手写日记）</p><details class="toggle" style="border: 1px solid #ecd452"><summary class="toggle-button" style="background-color: #ecd452;color: #a76283">效果展示</summary><div class="toggle-content"><p><a href="https://icewolf-li.top/categories/%E6%97%A5%E8%AE%B0/">点击前往</a></p></div></details><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>使用到了<code>hexo-generator-index2</code>插件（<a href="https://github.com/Jamling/hexo-generator-index2">官方文档</a>）,但是会和自带的<code>hexo-generator-index</code>产生冲突,需要卸载原来的</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-index2 --save</span><br><span class="line">npm uninstall hexo-generator-index --save</span><br></pre></td></tr></table></figure><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>在配置文件<code>_config.yml</code>中，添加</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">index2_generator:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">layout:</span> <span class="string">&#x27;index&#x27;</span>   <span class="comment"># 首页设置</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">&#x27;&#x27;</span>          <span class="comment"># 首页路径</span></span><br><span class="line">    <span class="attr">exclude:</span>          <span class="comment"># 不包括</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">category</span> <span class="string">日记</span> <span class="comment"># 排除category中的‘日记’</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">layout:</span> <span class="string">&#x27;category&#x27;</span>        <span class="comment"># 在category设置</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">&#x27;categories/diary&#x27;</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">10</span>              <span class="comment"># 每页文章数</span></span><br><span class="line">    <span class="attr">order_by:</span> <span class="string">-date</span>           <span class="comment"># 按照日期倒序排</span></span><br><span class="line">    <span class="attr">include:</span>                  <span class="comment"># 包括</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">category</span> <span class="string">日记</span>         <span class="comment"># 在页面中只包括‘日记’分类</span></span><br></pre></td></tr></table></figure><h1 id="在scaffolds模板创建diary-md文件"><a href="#在scaffolds模板创建diary-md文件" class="headerlink" title="在scaffolds模板创建diary.md文件"></a>在<code>scaffolds</code>模板创建<code>diary.md</code>文件</h1><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; date &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125; # 创建日期</span><br><span class="line">categories: # 分类</span><br><span class="line"><span class="bullet">  -</span> 日记</span><br><span class="line"><span class="section">cover: # 文章图片</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line">使用的时候只需要</span><br><span class="line">hexo new diary &lt;日期&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>其实这只是介绍了一个插件的使用，很多时候某些功能并不需要重构，通过已有的插件就可以达到效果。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 魔改 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>miui免 ROOT 隐藏状态栏 NFC闹钟等图标</title>
       <link href="/posts/miui%E5%85%8D-ROOT-%E9%9A%90%E8%97%8F%E7%8A%B6%E6%80%81%E6%A0%8F-NFC%E9%97%B9%E9%92%9F%E7%AD%89%E5%9B%BE%E6%A0%87.html"/>
       <url>/posts/miui%E5%85%8D-ROOT-%E9%9A%90%E8%97%8F%E7%8A%B6%E6%80%81%E6%A0%8F-NFC%E9%97%B9%E9%92%9F%E7%AD%89%E5%9B%BE%E6%A0%87.html</url>
