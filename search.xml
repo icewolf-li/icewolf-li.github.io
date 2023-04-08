@@ -519,6 +519,17 @@
     
     
     <entry>
+      <title>links</title>
+      <link href="/links/index.html"/>
+      <url>/links/index.html</url>
+      
+        <content type="html"><![CDATA[<div id="qexo-friends"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/qexo-static@1.5.1/hexo/friends/friends.css"/><script src="https://cdn.jsdelivr.net/npm/qexo-static@1.5.1/hexo/friends/friends.js"></script><script>loadQexoFriends("qexo-friends", "https://qexo.icewolf-li.top")</script>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>music</title>
       <link href="/music/index.html"/>
       <url>/music/index.html</url>
