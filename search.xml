@@ -581,7 +581,7 @@
       <link href="/talks/index.html"/>
       <url>/talks/index.html</url>
       
-        <content type="html"><![CDATA[<div id="qexot"></div><script src="https://cdn.jsdelivr.net/npm/qexo-static@1.6.0/hexo/talks.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/qexo-static@1.6.0/hexo/talks.css"><script>showQexoTalks("qexot", "https://qexo.icewolf-li.top", 5)</script>]]></content>
+        <content type="html"><![CDATA[<head>  <!-- ... -->  <script src="//cdn.jsdelivr.net/gh/Uyoahz26/daodao@main/dist/qexo-dao.min.js"></script>  <!-- ... --></head><body>  <!-- ... -->  <div id="qexoDaoDao"></div>  <script>    qexoDaodao?.init({      el: "#qexoDaoDao",      avatar: "https://www.icewolf-li.top/img/icewolf_li.jpg",      name: "icewolf-li",      limit: 10,      useLoadingImg: false,      baseURL: "https://qexo.icewolf-li.top/",    }).then(function (){      console.log("qexoDaodao加载完成");    })  </script></body>]]></content>
       
     </entry>
     
