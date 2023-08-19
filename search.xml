@@ -575,5 +575,16 @@
     </entry>
     
     
+    
+    <entry>
+      <title>talks</title>
+      <link href="/talks/index.html"/>
+      <url>/talks/index.html</url>
+      
+        <content type="html"><![CDATA[<div id="qexot"></div><script src="https://cdn.jsdelivr.net/npm/qexo-static@1.6.0/hexo/talks.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/qexo-static@1.6.0/hexo/talks.css"><script>showQexoTalks("qexot", "https://qexo.icewolf-li.top", 5)</script>]]></content>
+      
+    </entry>
+    
+    
   
 </search>
