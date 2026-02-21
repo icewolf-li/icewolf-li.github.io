@@ -1,0 +1,672 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>微雪SO-ARM101机械臂 | 不讲道李的信息站</title><meta name="keywords" content="ros2"><meta name="author" content="nodaoli"><meta name="copyright" content="nodaoli"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="微雪SO-ARM101机械臂"><meta name="application-name" content="微雪SO-ARM101机械臂"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="微雪SO-ARM101机械臂"><meta property="og:url" content="https://nodaoli.top/posts/%E5%BE%AE%E9%9B%AASO-ARM101%E6%9C%BA%E6%A2%B0%E8%87%82.html"><meta property="og:site_name" content="不讲道李的信息站"><meta property="og:description" content="SO-ARM100&amp;#x2F;101 - Waveshare Wiki https:&amp;#x2F;&amp;#x2F;wiki.seeedstudio.com&amp;#x2F;cn&amp;#x2F;lerobot_so100m_new 【SO-ARM机械臂Lerobot超详细上手教程：1序言】 https:&amp;#x2F;&amp;#x2F;www.bilibili.com&amp;#x2F;video&amp;#x2F;BV"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://nodaoli.top/img/av.png"><meta property="article:author" content="nodaoli"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://nodaoli.top/img/av.png"><meta name="description" content="SO-ARM100&amp;#x2F;101 - Waveshare Wiki https:&amp;#x2F;&amp;#x2F;wiki.seeedstudio.com&amp;#x2F;cn&amp;#x2F;lerobot_so100m_new 【SO-ARM机械臂Lerobot超详细上手教程：1序言】 https:&amp;#x2F;&amp;#x2F;www.bilibili.com&amp;#x2F;video&amp;#x2F;BV"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://nodaoli.top/posts/%E5%BE%AE%E9%9B%AASO-ARM101%E6%9C%BA%E6%A2%B0%E8%87%82.html"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
+  postHeadAiDescription: undefined,
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: 'https://blog-twikoo.nodaoli.top',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: undefined,
+  friends_vue_info: undefined,
+  navMusic: false,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: nodaoli","link":"链接: ","source":"来源: 不讲道李的信息站","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: true,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '不讲道李的信息站',
+  title: '微雪SO-ARM101机械臂',
+  postAI: '',
+  pageFillDescription: '启用MuJoCo仿真, 拉取官方lerobot仓库, 使用UV安装GPU-Torch 和 MuJoCo, 配置舵机id, 校准, 进行测试, Python引用, 数据集, 解释, 为什么需要分配id机械臂超详细上手教程序言机械臂实践启用仿真拉取官方仓库使用安装和配置舵机设置舵机的跟着教程其实就是先电脑连接上控制板使用命令查看端口号因为使用虚拟环境所以最好使用开始配置其中指的是从臂改成就可以配置主臂端口也要改成然后从爪子开始每次只连接一个到控制板上面然后按回车会依次进行编号校准需要先把每个关节舵机调整成中间然后在进行校准扭动舵机从最小到最大进行测试先去收录仓库下载的文件选中的是如果在上面的步骤中使用的话那么把下面的代码在目录下创建导入配置用户指定的端口关节名称映射关节名称电机名称名称完全匹配所以我们可以直接映射初始化真实的主臂正在初始化端口配置使用角度方便后续转换为弧度主臂连接成功主臂连接失败请检查端口和连接是否正常初始化仿真环境正在加载模型模型加载失败开始遥操作循环按停止遥操作循环读取主臂动作返回字典单位为角度因为设置了应用到仿真中获取角度值转换为弧度使用弧度在模型中查找关节获取关节在中的地址设置关节位置步进仿真同步视图保持循环频率约正在停止断开连接引用这里呢是一个多继承的类创建的时候要可以指定串口数值表达方式机械臂的校准数据的位置实例化数据集默认在是根据来查找数据集的电机驱动模式归位偏移量最小位置范围最大位置范围解释为什么需要分配简单来说舵机分配的过程就是通过串口通讯修改舵机内部芯片的身份证号配置以下是这一过程的技术原理和操作逻辑拆解为什么需要分配出厂默认都是所有的舵机出厂时内部存储器里的号都被写死为总线通讯原理这些舵机使用的是串行总线通信这意味着所有舵机都挂在同一根通讯线上当电脑发送指令为的舵机请转动时如果线上挂着个都是的舵机它们会同时响应或者返回的数据会互相干扰总线冲突导致通信失败区分关节为了让电脑能单独指挥手腕或底座我们必须给每个关节分配一个独一无二的数字到分配的核心逻辑如何改写无论是使用脚本还是软件底层的操作步骤都是一样的物理隔离关键步骤因为所有新舵机都是你不能把它们串联起来一次性改如果串联了电脑发把改成所有舵机都会变成因此必须只连接一个舵机到驱动板上发送改写指令电脑通过转串口驱动板发送一串十六进制指令指令含义大致是广播针对写入内存地址寄存器新数值这个新会被写入舵机的非易失性存储器这意味着断电后依然会保存不需要每次开机都重设验证写入后程序通常会尝试用新比如去一下舵机如果舵机有回应说明修改成功的分配策略倒序法官方脚本采用了一种特定的顺序为了防止混淆通常建议您遵循这个映射表关节名称部位描述分配夹爪最末端手腕旋转手腕弯曲肘部肩部升降底座旋转脚本的操作流程是这样的程序提示您只插入夹爪舵机程序扫描通常扫描找到舵机程序发送指令将改为程序提示您拔掉夹爪舵机换上第二个舵机它是新的还是程序发送指令将改为以此类推直到底座如果您使用工具既然您在上且之前的脚本有报错您也可以用上帝视角手动修改原理更直观打开或软件连接一个舵机点击搜索软件会显示探测到在设置栏输入点击设置写入此时软件再搜索就会显示探测到拔掉它贴上标签换下一个重复步骤改为总结这个过程本质上就是给每个刚出生的克隆人发一张不同的身份证这样以后它们坐在同一条船总线上时电脑叫谁的名字谁才会答应重要提示一旦您把改乱了比如两个舵机都设成了把它们串联在一起时就会报错解决方法是单独把其中一个连上电脑重新把改掉',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-02-21 12:14:49',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 8.1.1"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">不讲道李的信息站</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://nodaoli.oss-cn-guangzhou.aliyuncs.com/HexoConfig/wechat.png?Expires=1712143119&amp;OSSAccessKeyId=TMP.3Kjf7CsgJfcDU6WG7HTpPt9tU54iSzzDuGmavA5a1c9xmkgQrDkAd3HU9Mi15cGWJCRoMFRorkMNoEWSBW7yPtZreknjGv&amp;Signature=ENNEhFHCa8bvTdP8KyVhsIMwDSM%3D" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://nodaoli.oss-cn-guangzhou.aliyuncs.com/HexoConfig/wechat.png?Expires=1712143119&amp;OSSAccessKeyId=TMP.3Kjf7CsgJfcDU6WG7HTpPt9tU54iSzzDuGmavA5a1c9xmkgQrDkAd3HU9Mi15cGWJCRoMFRorkMNoEWSBW7yPtZreknjGv&amp;Signature=ENNEhFHCa8bvTdP8KyVhsIMwDSM%3D"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://nodaoli.oss-cn-guangzhou.aliyuncs.com/HexoConfig/alipay.jpg?Expires=1712143083&amp;OSSAccessKeyId=TMP.3Kjf7CsgJfcDU6WG7HTpPt9tU54iSzzDuGmavA5a1c9xmkgQrDkAd3HU9Mi15cGWJCRoMFRorkMNoEWSBW7yPtZreknjGv&amp;Signature=tJW5oUTF8Ze531Q5EmrMepN0AJI%3D" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://nodaoli.oss-cn-guangzhou.aliyuncs.com/HexoConfig/alipay.jpg?Expires=1712143083&amp;OSSAccessKeyId=TMP.3Kjf7CsgJfcDU6WG7HTpPt9tU54iSzzDuGmavA5a1c9xmkgQrDkAd3HU9Mi15cGWJCRoMFRorkMNoEWSBW7yPtZreknjGv&amp;Signature=tJW5oUTF8Ze531Q5EmrMepN0AJI%3D"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Cloudflare/" style="font-size: 1.05rem;">Cloudflare<sup>1</sup></a><a href="/tags/ESPIDF/" style="font-size: 1.05rem;">ESPIDF<sup>3</sup></a><a href="/tags/IDEA/" style="font-size: 1.05rem;">IDEA<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 1.05rem;">JavaScript<sup>2</sup></a><a href="/tags/Ubuntu/" style="font-size: 1.05rem;">Ubuntu<sup>10</sup></a><a href="/tags/Vue/" style="font-size: 1.05rem;">Vue<sup>5</sup></a><a href="/tags/adobe/" style="font-size: 1.05rem;">adobe<sup>1</sup></a><a href="/tags/docker-compose/" style="font-size: 1.05rem;">docker-compose<sup>1</sup></a><a href="/tags/esp32s3n16r8/" style="font-size: 1.05rem;">esp32s3n16r8<sup>3</sup></a><a href="/tags/git/" style="font-size: 1.05rem;">git<sup>3</sup></a><a href="/tags/h2/" style="font-size: 1.05rem;">h2<sup>2</sup></a><a href="/tags/hexo/" style="font-size: 1.05rem;">hexo<sup>2</sup></a><a href="/tags/java/" style="font-size: 1.05rem;">java<sup>16</sup></a><a href="/tags/jellyfin/" style="font-size: 1.05rem;">jellyfin<sup>1</sup></a><a href="/tags/maven/" style="font-size: 1.05rem;">maven<sup>2</sup></a><a href="/tags/miui/" style="font-size: 1.05rem;">miui<sup>1</sup></a><a href="/tags/nextjs/" style="font-size: 1.05rem;">nextjs<sup>1</sup></a><a href="/tags/openclash/" style="font-size: 1.05rem;">openclash<sup>1</sup></a><a href="/tags/openwrt/" style="font-size: 1.05rem;">openwrt<sup>1</sup></a><a href="/tags/python/" style="font-size: 1.05rem;">python<sup>1</sup></a><a href="/tags/ros2/" style="font-size: 1.05rem;">ros2<sup>3</sup></a><a href="/tags/vscode/" style="font-size: 1.05rem;">vscode<sup>3</sup></a><a href="/tags/%E7%BE%A4%E6%99%96/" style="font-size: 1.05rem;">群晖<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/02/"><span class="card-archive-list-date">二月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/01/"><span class="card-archive-list-date">一月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">9</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/11/"><span class="card-archive-list-date">十一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">10</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/08/"><span class="card-archive-list-date">八月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/03/"><span class="card-archive-list-date">三月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/11/"><span class="card-archive-list-date">十一月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">十月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">九月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">4</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="article-meta tags"><a class="article-meta__tags" href="/tags/ros2/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>ros2</span></a></span></div></div><h1 class="post-title" itemprop="name headline">微雪SO-ARM101机械臂</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2026-02-03T16:19:14.000Z" title="发表于 2026-02-03 16:19:14">2026-02-03</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2026-02-21T12:14:49.153Z" title="更新于 2026-02-21 12:14:49">2026-02-21</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">1.9k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator"></span><span id="" data-flag-title="微雪SO-ARM101机械臂"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="twikoo_visitors" title="访问量"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为广西"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>广西</span><span class="post-meta-separator"></span><span class="post-meta-commentcount"><i class="anzhiyufont anzhiyu-icon-comments post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/posts/%E5%BE%AE%E9%9B%AASO-ARM101%E6%9C%BA%E6%A2%B0%E8%87%82.html#post-comment" tabindex="-1"><span id="twikoo-count"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></a></span></div></div></div><article class="post-content" id="article-container" itemscope itemtype="https://nodaoli.top/posts/%E5%BE%AE%E9%9B%AASO-ARM101%E6%9C%BA%E6%A2%B0%E8%87%82.html"><header><a href="/tags/ros2/" tabindex="-1" itemprop="url">ros2</a><h1 id="CrawlerTitle" itemprop="name headline">微雪SO-ARM101机械臂</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">nodaoli</span><time itemprop="dateCreated datePublished" datetime="2026-02-03T16:19:14.000Z" title="发表于 2026-02-03 16:19:14">2026-02-03</time><time itemprop="dateCreated datePublished" datetime="2026-02-21T12:14:49.153Z" title="更新于 2026-02-21 12:14:49">2026-02-21</time></header><p><a target="_blank" rel="noopener" href="https://www.waveshare.net/wiki/SO-ARM100/101">SO-ARM100&#x2F;101 - Waveshare Wiki</a></p>
+<p><a target="_blank" rel="noopener" href="https://wiki.seeedstudio.com/cn/lerobot_so100m_new">https://wiki.seeedstudio.com/cn/lerobot_so100m_new</a></p>
+<p>【SO-ARM机械臂Lerobot超详细上手教程：1序言】 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1H6UUBcErT/?share_source=copy_web&vd_source=9c987ed6ab5014f976c5bd5305300cc0">https://www.bilibili.com/video/BV1H6UUBcErT/?share_source=copy_web&amp;vd_source=9c987ed6ab5014f976c5bd5305300cc0</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.xiadengma.com/posts/lerobot-so-101-%E6%9C%BA%E6%A2%B0%E8%87%82%E5%AE%9E%E8%B7%B5/">LeRobot SO-101 机械臂实践 · MyBlog</a></p>
+<h1 id="启用MuJoCo仿真"><a href="#启用MuJoCo仿真" class="headerlink" title="启用MuJoCo仿真"></a>启用MuJoCo仿真</h1><h2 id="拉取官方lerobot仓库"><a href="#拉取官方lerobot仓库" class="headerlink" title="拉取官方lerobot仓库"></a>拉取官方lerobot仓库</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/huggingface/lerobot.git ~/lerobot</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用UV安装GPU-Torch-和-MuJoCo"><a href="#使用UV安装GPU-Torch-和-MuJoCo" class="headerlink" title="使用UV安装GPU-Torch 和 MuJoCo"></a>使用UV安装GPU-Torch 和 MuJoCo</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">uv venv</span><br><span class="line">uv pip install torch --torch-backend=auto</span><br><span class="line">uv add mujoco feetech-servo-sdk</span><br><span class="line">uv sync</span><br><span class="line"></span><br><span class="line">uv pip install -e .</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置舵机id"><a href="#配置舵机id" class="headerlink" title="配置舵机id"></a>配置舵机id</h2><p><a target="_blank" rel="noopener" href="https://www.waveshare.net/wiki/SO-ARM100/101_%E8%AE%BE%E7%BD%AE%E8%88%B5%E6%9C%BA%E7%9A%84_ID">SO-ARM100&#x2F;101 设置舵机的 ID - Waveshare Wiki</a><br>跟着教程，其实就是先电脑连接上控制板，使用命令查看端口号，因为使用uv虚拟环境，所以最好使用<code>uv run</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uv run lerobot-find-port</span><br></pre></td></tr></table></figure>
+<p>开始配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uv run lerobot-setup-motors --robot.type=so101_follower --robot.port=COM13</span><br></pre></td></tr></table></figure>
+<p>其中<code>robot.type</code>指的是从臂：<code>so101_follower</code><br>改成<code>teleop.type</code>就可以配置主臂，端口也要改成<code>teleop.port</code></p>
+<p>然后从爪子开始，每次只连接一个到控制板上面，然后按回车会依次进行编号</p>
+<h1 id="校准"><a href="#校准" class="headerlink" title="校准"></a>校准</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uv run lerobot-calibrate  --teleop.type=so101_leader --teleop.port=COM12 --teleop.id=so101_leader</span><br></pre></td></tr></table></figure>
+<p>需要先把每个关节舵机调整成中间，然后在进行校准，扭动舵机，从最小到最大</p>
+<h2 id="进行测试"><a href="#进行测试" class="headerlink" title="进行测试"></a>进行测试</h2><p>先去<a target="_blank" rel="noopener" href="https://github.com/google-deepmind/mujoco_menagerie">收录仓库</a>下载MuJoCo的文件，选中的是<code>scene.xml</code></p>
+<p>如果在上面的步骤中使用<code>uv add mujoco</code>的话，那么把下面的代码在lerobot目录下创建</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> mujoco</span><br><span class="line"><span class="keyword">import</span> mujoco.viewer</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># LeRobot 导入</span></span><br><span class="line"><span class="keyword">from</span> lerobot.teleoperators.so_leader.so_leader <span class="keyword">import</span> SOLeader</span><br><span class="line"><span class="keyword">from</span> lerobot.teleoperators.so_leader.config_so_leader <span class="keyword">import</span> SOLeaderTeleopConfig</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置</span></span><br><span class="line">XML_PATH = <span class="string">r&quot;D:\tempfolder\arm\101\scene.xml&quot;</span></span><br><span class="line">LEADER_PORT = <span class="string">&quot;COM12&quot;</span>  <span class="comment"># 用户指定的端口</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 关节名称映射</span></span><br><span class="line"><span class="comment"># Mujoco XML 关节名称: shoulder_pan, shoulder_lift, elbow_flex, wrist_flex, wrist_roll, gripper</span></span><br><span class="line"><span class="comment"># SOLeader 电机名称: shoulder_pan, shoulder_lift, elbow_flex, wrist_flex, wrist_roll, gripper</span></span><br><span class="line"><span class="comment"># 名称完全匹配，所以我们可以直接映射。</span></span><br><span class="line"></span><br><span class="line">JOINT_NAMES = [</span><br><span class="line">    <span class="string">&quot;shoulder_pan&quot;</span>,</span><br><span class="line">    <span class="string">&quot;shoulder_lift&quot;</span>,</span><br><span class="line">    <span class="string">&quot;elbow_flex&quot;</span>,</span><br><span class="line">    <span class="string">&quot;wrist_flex&quot;</span>,</span><br><span class="line">    <span class="string">&quot;wrist_roll&quot;</span>,</span><br><span class="line">    <span class="string">&quot;gripper&quot;</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    <span class="comment"># 1. 初始化真实的 LeRobot 主臂 (Leader Arm)</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;正在初始化 SOLeader，端口: <span class="subst">&#123;LEADER_PORT&#125;</span>...&quot;</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 配置使用角度 (degrees)，方便后续转换为弧度 (radians)</span></span><br><span class="line">    leader_config = SOLeaderTeleopConfig(port=LEADER_PORT, use_degrees=<span class="literal">True</span>)</span><br><span class="line">    leader = SOLeader(leader_config)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        leader.connect()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;主臂连接成功！&quot;</span>)</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;主臂连接失败: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;请检查端口和连接是否正常。&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 2. 初始化 Mujoco 仿真环境</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;正在加载 Mujoco 模型: <span class="subst">&#123;XML_PATH&#125;</span>...&quot;</span>)</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        m = mujoco.MjModel.from_xml_path(XML_PATH)</span><br><span class="line">        d = mujoco.MjData(m)</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;Mujoco 模型加载失败: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line">        leader.disconnect()</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;开始遥操作循环...&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;按 Ctrl+C 停止。&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 3. 遥操作循环 (Teleoperation Loop)</span></span><br><span class="line">    <span class="keyword">with</span> mujoco.viewer.launch_passive(m, d) <span class="keyword">as</span> viewer:</span><br><span class="line">        start_time = time.time()</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            <span class="keyword">while</span> viewer.is_running():</span><br><span class="line">                <span class="comment"># 读取主臂动作</span></span><br><span class="line">                <span class="comment"># 返回字典 &#123;motor_name.pos: value&#125;，单位为角度 (因为设置了 use_degrees=True)</span></span><br><span class="line">                leader_action = leader.get_action() </span><br><span class="line">                </span><br><span class="line">                <span class="comment"># 应用到 Mujoco 仿真中</span></span><br><span class="line">                <span class="keyword">for</span> i, name <span class="keyword">in</span> <span class="built_in">enumerate</span>(JOINT_NAMES):</span><br><span class="line">                    motor_key = <span class="string">f&quot;<span class="subst">&#123;name&#125;</span>.pos&quot;</span></span><br><span class="line">                    <span class="keyword">if</span> motor_key <span class="keyword">in</span> leader_action:</span><br><span class="line">                        <span class="comment"># 获取角度值</span></span><br><span class="line">                        deg_val = leader_action[motor_key]</span><br><span class="line">                        </span><br><span class="line">                        <span class="comment"># 转换为弧度 (Mujoco 使用弧度)</span></span><br><span class="line">                        rad_val = np.deg2rad(deg_val)</span><br><span class="line">                        </span><br><span class="line">                        <span class="comment"># 在 Mujoco 模型中查找关节 ID</span></span><br><span class="line">                        joint_id = mujoco.mj_name2id(m, mujoco.mjtObj.mjOBJ_JOINT, name)</span><br><span class="line">                        <span class="keyword">if</span> joint_id != -<span class="number">1</span>:</span><br><span class="line">                           <span class="comment"># 获取关节在 qpos 中的地址</span></span><br><span class="line">                           qpos_adr = m.jnt_qposadr[joint_id]</span><br><span class="line">                           <span class="comment"># 设置关节位置</span></span><br><span class="line">                           d.qpos[qpos_adr] = rad_val </span><br><span class="line">                        </span><br><span class="line">                <span class="comment"># 步进仿真</span></span><br><span class="line">                mujoco.mj_step(m, d)</span><br><span class="line">                </span><br><span class="line">                <span class="comment"># 同步视图</span></span><br><span class="line">                viewer.sync()</span><br><span class="line">                </span><br><span class="line">                <span class="comment"># 保持循环频率 (约 60Hz)</span></span><br><span class="line">                time.sleep(<span class="number">1.0</span>/<span class="number">60.0</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">except</span> KeyboardInterrupt:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;正在停止...&quot;</span>)</span><br><span class="line">        <span class="keyword">finally</span>:</span><br><span class="line">            leader.disconnect()</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;断开连接。&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="Python引用"><a href="#Python引用" class="headerlink" title="Python引用"></a>Python引用</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> lerobot.teleoperators.so_leader.so_leader <span class="keyword">import</span> SOLeader</span><br><span class="line"><span class="keyword">from</span> lerobot.teleoperators.so_leader.config_so_leader <span class="keyword">import</span> SOLeaderTeleopConfig</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这里呢，是一个多继承的类，创建的时候要可以指定串口，数值表达方式，机械臂的id，校准数据的位置</span></span><br><span class="line">leader_config = SOLeaderTeleopConfig(port=LEADER_PORT, use_degrees=<span class="literal">False</span>, <span class="built_in">id</span>=TELEOP_ID, calibration_dir=CALIBRATION_DIR)</span><br><span class="line"><span class="comment"># 实例化</span></span><br><span class="line">leader = SOLeader(leader_config)</span><br></pre></td></tr></table></figure>
+
+<h1 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h1><p>默认在<code>~/.cache/huggingface/lerobot/calibration</code>，是根据<code>id</code>来查找数据集的</p>
+<ul>
+<li>id: 电机 ID</li>
+<li>drive_mode: 驱动模式</li>
+<li>homing_offset: 归位偏移量</li>
+<li>range_min: 最小位置范围</li>
+<li>range_max: 最大位置范围</li>
+</ul>
+<h1 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h1><h2 id="为什么需要分配id"><a href="#为什么需要分配id" class="headerlink" title="为什么需要分配id"></a>为什么需要分配id</h2><p>简单来说，舵机分配 ID 的过程就是<strong>通过串口通讯修改舵机内部芯片的“身份证号”（EEPROM 配置）</strong>。</p>
+<p>以下是这一过程的技术原理和操作逻辑拆解：</p>
+<ol>
+<li>为什么需要分配 ID？</li>
+</ol>
+<p>• <strong>出厂默认 ID 都是 1</strong>：所有的 Feetech STS3215 舵机出厂时，内部存储器里的 ID 号都被写死为 <code>1</code>。</p>
+<p>• <strong>总线通讯原理</strong>：这些舵机使用的是**串行总线（Serial Bus）**通信。这意味着所有舵机都挂在同一根通讯线上（Tx&#x2F;Rx）。当电脑发送指令“ID 为 1 的舵机请转动”时，如果线上挂着 6 个 ID 都是 1 的舵机，它们会同时响应，或者返回的数据会互相干扰（总线冲突），导致通信失败。</p>
+<p>• <strong>区分关节</strong>：为了让电脑能单独指挥“手腕”或“底座”，我们必须给每个关节分配一个独一无二的数字（1 到 6）。</p>
+<ol start="2">
+<li>分配 ID 的核心逻辑（如何改写）</li>
+</ol>
+<p>无论是使用 Python 脚本还是 Windows 软件，底层的操作步骤都是一样的：</p>
+<p>1. <strong>物理隔离（关键步骤）</strong>：</p>
+<p>    ◦ 因为所有新舵机 ID 都是 1，你不能把它们串联起来一次性改。如果串联了，电脑发“把 ID 1 改成 6”，所有舵机都会变成 6。</p>
+<p>    ◦ 因此，必须<strong>只连接一个舵机</strong>到驱动板上,。</p>
+<p>2. <strong>发送改写指令</strong>：</p>
+<p>    ◦ 电脑通过 USB 转串口（驱动板）发送一串十六进制指令。</p>
+<p>    ◦ 指令含义大致是：<code>[广播/针对ID 1] [写入内存] [地址: ID寄存器] [新数值: 6]</code>。</p>
+<p>    ◦ 这个新 ID 会被写入舵机的 <strong>EEPROM</strong>（非易失性存储器），这意味着断电后 ID 依然会保存，不需要每次开机都重设。</p>
+<p>3. <strong>验证</strong>：</p>
+<p>    ◦ 写入后，程序通常会尝试用新 ID（比如 6）去 ping 一下舵机。如果舵机有回应，说明修改成功。</p>
+<ol start="3">
+<li>LeRobot 的分配策略（倒序法）</li>
+</ol>
+<p>LeRobot 官方脚本采用了一种特定的顺序，为了防止混淆，通常建议您遵循这个映射表,：</p>
+<table>
+<thead>
+<tr>
+<th>关节名称 (Joint Name)</th>
+<th>部位描述</th>
+<th>分配 ID</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Gripper</strong></td>
+<td>夹爪（最末端）</td>
+<td><strong>6</strong></td>
+</tr>
+<tr>
+<td><strong>Wrist Roll</strong></td>
+<td>手腕旋转</td>
+<td><strong>5</strong></td>
+</tr>
+<tr>
+<td><strong>Wrist Flex</strong></td>
+<td>手腕弯曲</td>
+<td><strong>4</strong></td>
+</tr>
+<tr>
+<td><strong>Elbow</strong></td>
+<td>肘部</td>
+<td><strong>3</strong></td>
+</tr>
+<tr>
+<td><strong>Shoulder Lift</strong></td>
+<td>肩部升降</td>
+<td><strong>2</strong></td>
+</tr>
+<tr>
+<td><strong>Shoulder Pan</strong></td>
+<td>底座旋转</td>
+<td><strong>1</strong></td>
+</tr>
+</tbody></table>
+<p><strong>脚本的操作流程是这样的</strong>,：</p>
+<p>1. 程序提示：<code>Connect ... &#39;gripper&#39; motor only</code>。</p>
+<p>2. 您只插入夹爪舵机。</p>
+<p>3. 程序扫描（通常扫描 ID 1），找到舵机。</p>
+<p>4. 程序发送指令：<strong>将 ID 1 改为 6</strong>。</p>
+<p>5. 程序提示：<code>Connect ... &#39;wrist_roll&#39; motor only</code>。</p>
+<p>6. 您拔掉夹爪舵机，换上第二个舵机（它是新的，ID 还是 1）。</p>
+<p>7. 程序发送指令：<strong>将 ID 1 改为 5</strong>。</p>
+<p>8. ……以此类推，直到底座（ID 1）。</p>
+<ol start="4">
+<li>如果您使用 Windows GUI 工具 (Feetech&#x2F;Hiwonder)</li>
+</ol>
+<p>既然您在 Windows 上，且之前的脚本有报错，您也可以用“上帝视角”手动修改，原理更直观：</p>
+<p>1. 打开 <strong>BusLinker</strong> 或 <strong>FD (Feetech Debugger)</strong> 软件。</p>
+<p>2. 连接一个舵机。</p>
+<p>3. 点击 <strong>“Search” (搜索)</strong> -&gt; 软件会显示探测到 <code>ID: 1</code>。</p>
+<p>4. 在 ID 设置栏输入 <code>6</code>，点击 <strong>“Set” (设置&#x2F;写入)</strong>。</p>
+<p>5. 此时软件再搜索，就会显示探测到 <code>ID: 6</code>。</p>
+<p>6. 拔掉它，贴上标签“6”，换下一个，重复步骤改为 5、4、3…</p>
+<p>总结</p>
+<p>这个过程本质上就是<strong>给每个刚出生的“克隆人”（ID 1）发一张不同的身份证（ID 1-6）</strong>，这样以后它们坐在同一条船（总线）上时，电脑叫谁的名字，谁才会答应。</p>
+<p><strong>⚠️ 重要提示</strong>：一旦您把 ID 改乱了（比如两个舵机都设成了 3），把它们串联在一起时就会报错。解决方法是<strong>单独</strong>把其中一个连上电脑，重新把 ID 改掉。</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/av.png" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/av.png" title="头像" alt="头像"></a><div class="post-copyright__author_name">nodaoli</div><div class="post-copyright__author_desc">小李小李，不讲道李</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://nodaoli.top/posts/%E5%BE%AE%E9%9B%AASO-ARM101%E6%9C%BA%E6%A2%B0%E8%87%82.html">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://nodaoli.top/posts/%E5%BE%AE%E9%9B%AASO-ARM101%E6%9C%BA%E6%A2%B0%E8%87%82.html')">微雪SO-ARM101机械臂</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://nodaoli.oss-cn-guangzhou.aliyuncs.com/HexoConfig/wechat.png?Expires=1712143119&amp;OSSAccessKeyId=TMP.3Kjf7CsgJfcDU6WG7HTpPt9tU54iSzzDuGmavA5a1c9xmkgQrDkAd3HU9Mi15cGWJCRoMFRorkMNoEWSBW7yPtZreknjGv&amp;Signature=ENNEhFHCa8bvTdP8KyVhsIMwDSM%3D" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://nodaoli.oss-cn-guangzhou.aliyuncs.com/HexoConfig/wechat.png?Expires=1712143119&amp;OSSAccessKeyId=TMP.3Kjf7CsgJfcDU6WG7HTpPt9tU54iSzzDuGmavA5a1c9xmkgQrDkAd3HU9Mi15cGWJCRoMFRorkMNoEWSBW7yPtZreknjGv&amp;Signature=ENNEhFHCa8bvTdP8KyVhsIMwDSM%3D" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://nodaoli.oss-cn-guangzhou.aliyuncs.com/HexoConfig/alipay.jpg?Expires=1712143083&amp;OSSAccessKeyId=TMP.3Kjf7CsgJfcDU6WG7HTpPt9tU54iSzzDuGmavA5a1c9xmkgQrDkAd3HU9Mi15cGWJCRoMFRorkMNoEWSBW7yPtZreknjGv&amp;Signature=tJW5oUTF8Ze531Q5EmrMepN0AJI%3D" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://nodaoli.oss-cn-guangzhou.aliyuncs.com/HexoConfig/alipay.jpg?Expires=1712143083&amp;OSSAccessKeyId=TMP.3Kjf7CsgJfcDU6WG7HTpPt9tU54iSzzDuGmavA5a1c9xmkgQrDkAd3HU9Mi15cGWJCRoMFRorkMNoEWSBW7yPtZreknjGv&amp;Signature=tJW5oUTF8Ze531Q5EmrMepN0AJI%3D" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://nodaoli.top/posts/%E5%BE%AE%E9%9B%AASO-ARM101%E6%9C%BA%E6%A2%B0%E8%87%82.html"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=undefined&amp;url=https://nodaoli.top/posts/%E5%BE%AE%E9%9B%AASO-ARM101%E6%9C%BA%E6%A2%B0%E8%87%82.html&amp;pic=undefined" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://nodaoli.top" target="_blank">不讲道李的信息站</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/ros2/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>ros2<span class="tagsPageCount">3</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="/img/av.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/WSL%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">WSL基础笔记</div></div></a></div><div class="next-post pull-right"><a href="/posts/NeuPan%20ROS2%E7%AC%94%E8%AE%B0.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">NeuPan ROS2笔记</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/posts/ROS2%20%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%BC%80%E5%8F%91%EF%BC%9A%E8%A7%A3%E5%86%B3%E5%A4%9A%20USB%20%E8%AE%BE%E5%A4%87%E5%90%8D%E8%B7%B3%E5%8F%98%EF%BC%88udev%20%E5%9B%BA%E5%AE%9A%E5%88%AB%E5%90%8D%EF%BC%89.html" title="ROS2 机器人开发：解决多 USB 设备名跳变（udev 固定别名）"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-01-02</div><div class="title">ROS2 机器人开发：解决多 USB 设备名跳变（udev 固定别名）</div></div></a></div><div><a href="/posts/ROS2%E7%AC%94%E8%AE%B0.html" title="ROS2笔记"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-01-26</div><div class="title">ROS2笔记</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)" style="display: none">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/av.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">产品、设计、开发</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">nodaoli</h1><div class="author-info__desc">小李小李，不讲道李</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/icewolf-li" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/672570334" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%AF%E7%94%A8MuJoCo%E4%BB%BF%E7%9C%9F"><span class="toc-number">1.</span> <span class="toc-text">启用MuJoCo仿真</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%89%E5%8F%96%E5%AE%98%E6%96%B9lerobot%E4%BB%93%E5%BA%93"><span class="toc-number">1.1.</span> <span class="toc-text">拉取官方lerobot仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8UV%E5%AE%89%E8%A3%85GPU-Torch-%E5%92%8C-MuJoCo"><span class="toc-number">1.2.</span> <span class="toc-text">使用UV安装GPU-Torch 和 MuJoCo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E8%88%B5%E6%9C%BAid"><span class="toc-number">1.3.</span> <span class="toc-text">配置舵机id</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%A1%E5%87%86"><span class="toc-number">2.</span> <span class="toc-text">校准</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E8%A1%8C%E6%B5%8B%E8%AF%95"><span class="toc-number">2.1.</span> <span class="toc-text">进行测试</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Python%E5%BC%95%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">Python引用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-number">4.</span> <span class="toc-text">数据集</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E9%87%8A"><span class="toc-number">5.</span> <span class="toc-text">解释</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%88%86%E9%85%8Did"><span class="toc-number">5.1.</span> <span class="toc-text">为什么需要分配id</span></a></li></ol></li></ol></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.shields.io/badge/nodaoli-%E4%B8%8A%E7%8F%AD%E6%91%B8%E9%B1%BC%E4%B8%AD-green/?style=social" alt="距离月入10k也就还差一个大佬带我~" title="距离月入10k也就还差一个大佬带我~"/><div id="runtimeTextTip"></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2023 - 2026 By <a class="footer-bar-link" href="/" title="nodaoli" target="_blank">nodaoli</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">102</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">23</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">33</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://nodaoli.top/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Cloudflare/" style="font-size: 0.88rem; color: rgb(17, 181, 183);">Cloudflare<sup>1</sup></a><a href="/tags/ESPIDF/" style="font-size: 0.88rem; color: rgb(128, 151, 126);">ESPIDF<sup>3</sup></a><a href="/tags/IDEA/" style="font-size: 0.88rem; color: rgb(159, 194, 156);">IDEA<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 0.88rem; color: rgb(52, 48, 121);">JavaScript<sup>2</sup></a><a href="/tags/Ubuntu/" style="font-size: 0.88rem; color: rgb(166, 57, 11);">Ubuntu<sup>10</sup></a><a href="/tags/Vue/" style="font-size: 0.88rem; color: rgb(147, 23, 130);">Vue<sup>5</sup></a><a href="/tags/adobe/" style="font-size: 0.88rem; color: rgb(45, 109, 163);">adobe<sup>1</sup></a><a href="/tags/docker-compose/" style="font-size: 0.88rem; color: rgb(127, 188, 148);">docker-compose<sup>1</sup></a><a href="/tags/esp32s3n16r8/" style="font-size: 0.88rem; color: rgb(175, 180, 19);">esp32s3n16r8<sup>3</sup></a><a href="/tags/git/" style="font-size: 0.88rem; color: rgb(165, 49, 99);">git<sup>3</sup></a><a href="/tags/h2/" style="font-size: 0.88rem; color: rgb(19, 0, 94);">h2<sup>2</sup></a><a href="/tags/hexo/" style="font-size: 0.88rem; color: rgb(30, 66, 16);">hexo<sup>2</sup></a><a href="/tags/java/" style="font-size: 0.88rem; color: rgb(89, 55, 5);">java<sup>16</sup></a><a href="/tags/jellyfin/" style="font-size: 0.88rem; color: rgb(180, 28, 43);">jellyfin<sup>1</sup></a><a href="/tags/maven/" style="font-size: 0.88rem; color: rgb(147, 185, 48);">maven<sup>2</sup></a><a href="/tags/miui/" style="font-size: 0.88rem; color: rgb(31, 159, 54);">miui<sup>1</sup></a><a href="/tags/nextjs/" style="font-size: 0.88rem; color: rgb(25, 125, 32);">nextjs<sup>1</sup></a><a href="/tags/openclash/" style="font-size: 0.88rem; color: rgb(24, 121, 143);">openclash<sup>1</sup></a><a href="/tags/openwrt/" style="font-size: 0.88rem; color: rgb(134, 88, 78);">openwrt<sup>1</sup></a><a href="/tags/python/" style="font-size: 0.88rem; color: rgb(155, 45, 0);">python<sup>1</sup></a><a href="/tags/ros2/" style="font-size: 0.88rem; color: rgb(37, 114, 56);">ros2<sup>3</sup></a><a href="/tags/vscode/" style="font-size: 0.88rem; color: rgb(16, 50, 96);">vscode<sup>3</sup></a><a href="/tags/%E7%BE%A4%E6%99%96/" style="font-size: 0.88rem; color: rgb(185, 176, 29);">群晖<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/03/2023 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2023 By 安知鱼 V1.6.15",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 nodaoli 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("04/03/2023 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "https://img.shields.io/badge/nodaoli-%E4%B8%8B%E7%8F%AD%E5%95%A6-green/?style=social";
+        img.title = "下班了就该开开心心的玩耍，嘿嘿~";
+        img.alt = "下班了就该开开心心的玩耍，嘿嘿~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://blog-twikoo.nodaoli.top',
+      region: '',
+      onCommentLoaded: () => {
+        anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(runFn,0)
+    else getScript('https://cdn.cbd.int/twikoo@1.6.44/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://blog-twikoo.nodaoli.top',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const runFn = () => {
+    init();
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://blog-twikoo.nodaoli.top',
+        region: '',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.cbd.int/twikoo@1.6.44/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'><div class='name'><span>${array[i].nick} </span></div></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://cdn.cbd.int/qrcodejs@1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:type\"]","meta[property=\"og:site_name\"]","meta[property=\"og:description\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
