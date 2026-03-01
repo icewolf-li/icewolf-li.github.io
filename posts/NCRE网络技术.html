@@ -1,0 +1,763 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>NCRE网络技术 | 不讲道李的信息站</title><meta name="author" content="nodaoli"><meta name="copyright" content="nodaoli"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="NCRE网络技术"><meta name="application-name" content="NCRE网络技术"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="NCRE网络技术"><meta property="og:url" content="https://nodaoli.top/posts/NCRE%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF.html"><meta property="og:site_name" content="不讲道李的信息站"><meta property="og:description" content="城域网 核心层核心层是城域网的最高层，负责处理大量的数据流量。核心层的设备通常是高性能的路由器和交换机，能够处理大量的数据传输。高速数据交换。  提供对外（互联网出口）的连接 为整个城域网提供一个高速、安全与具有QoS保障能力的数据传输环境  汇聚层汇聚层位于核心层和接入层之间，负责将接入层的流量汇"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://nodaoli.top/img/av.png"><meta property="article:author" content="nodaoli"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://nodaoli.top/img/av.png"><meta name="description" content="城域网 核心层核心层是城域网的最高层，负责处理大量的数据流量。核心层的设备通常是高性能的路由器和交换机，能够处理大量的数据传输。高速数据交换。  提供对外（互联网出口）的连接 为整个城域网提供一个高速、安全与具有QoS保障能力的数据传输环境  汇聚层汇聚层位于核心层和接入层之间，负责将接入层的流量汇"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://nodaoli.top/posts/NCRE%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF.html"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
+  postHeadAiDescription: undefined,
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: 'https://blog-twikoo.nodaoli.top',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: undefined,
+  friends_vue_info: undefined,
+  navMusic: false,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: nodaoli","link":"链接: ","source":"来源: 不讲道李的信息站","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: true,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '不讲道李的信息站',
+  title: 'NCRE网络技术',
+  postAI: '',
+  pageFillDescription: '城域网, 核心层, 汇聚层, 接入层, 城域网技术描述, 技术特征, ADSL（非对称数字用户路线）, Cable Modem（电缆调制解调器）, MPLS（Multi-Protocol Label Switching多协议标签交换）, HDSL（High-bit-rate Digital Subscriber Line高比特率数字用户线路）, VDSH（Very-higt-bit-rate Digital Subscriber Line）, RPR环, HFC（Hybrid Fiber-Coaxial混合光纤同轴电缆网）, 传输速率, OC速率, 中继距离, 传输协议, 802, 个人局域网（WPAN）——近身距离, 局域网（LAN）——一栋楼x2F一个校园, 城域网（MAN）——一个城市, 光以太网, 中小型网络系统总体规划与设计, 路由器, 背板（或背板带宽Backplane Bandwidth）, 吞吐量**（Throughput）**, 延时与延时抖动, 丢包率, 服务质量城域网核心层核心层是城域网的最高层负责处理大量的数据流量核心层的设备通常是高性能的路由器和交换机能够处理大量的数据传输高速数据交换提供对外互联网出口的连接为整个城域网提供一个高速安全与具有保障能力的数据传输环境汇聚层汇聚层位于核心层和接入层之间负责将接入层的流量汇聚到核心层汇聚层的设备通常是中等性能的路由器和交换机能够处理中等规模的流量处理身份认证计费和宽带控制流量汇聚将多个接入层节点的数据向上透传接入层接入层是城域网的最底层负责将终端设备如服务器等接入网络接入层的设备通常是交换机能够提供多个端口供终端设备连接城域网技术描述可以使用实现带外网络管理利用网络及协议进行网络管理汇聚层以上核心交换层带外管理汇聚层以下用户接入层带内管理保证服务质量的有资源预留区分服务和多协议标记交换技术特征非对称数字用户路线下行快上行慢上行速率在下行速率在使用了一个频分复用技术语音信道用于普通电话通话上行信道大约用于上传数据下行信道大约用于下载数据电缆调制解调器也是频分复用技术将信道分为上行信道和下行信道专门为用线电视网进行数据传输设计的无需拨号非对称速率上行慢下行快共享式带宽用的人越多速度越慢多协议标签交换如果把光纤比作高速公路光以太网是公路的标准那么就是一套高速路自动收费与导航系统的核心逻辑不再看地址传统的路由器在转发数据时需要拆开数据包查地址然后去庞大的路由表里一行行比对这就像快递员每到一个分拣站都要拆开包裹看具体地址效率较低的做法是打标签在数据进入网络边缘时给它贴上一个短而固定长度的标签快速交换路径中间的交换机只看这个标签编号查一个简单的索引表就直接甩到下一个接口它不需要去看复杂的路由表的技术特征多协议它可以承载各种协议不仅是也可以是传统的或帧中继二层半协议在模型中它介于第二层数据链路层和第三层网络层之间它在以太网帧头和头之间插入了一个头部面向连接虽然以太网是无连接的但通过建立标签交换路径让数据包像走铁路轨道一样沿着预先设定的路径行驶高比特率数字用户线路对称传输上下行对等利用到对双绞线上行传输速率最大可以达到非对称带宽特性上行速率为下行速率为环实现自愈方向性外环顺时针方向传输数据分组内环逆时针方向传输数据分组同时利用这两个环来传输数据和控制信息带宽利用率极高带宽共享公平算法能够自动调节各个节点的发送速率防止某个节点占用过多带宽导致其他节点饿死目的节点剥离在环中数据帧由源节点发出由目的节点从环上剥离混合光纤同轴电缆网简单来说就是把光纤和同轴电缆结合起来的宽带接入技术共享带宽同一个光节点下的所有用户共享一条下行带宽与独享最大的区别频率划分上行信道用于上传电视信道用于看电视下行数据信道以上用于下载上网数据非对称性下行速率最高可达甚至更高远大于上行速率双向传输系统传输速率速率中继距离技术类型传输介质典型中继传输距离五类线以太网双绞线电话铜线电缆同轴电缆需频繁使用放大器通常几公里单模光纤光纤以上传输协议个人局域网近身距离无线个人个域网标准蓝牙低速率无线个域网的底层你玩搞传感器网络时常接触局域网一栋楼一个校园以太网标准这是有线网络的基石衍生考点快速以太网千兆以太网无线局域网标准即成员是最垃圾的升级到就是提升到了的速率双频多输入多输出只支持技术双频理论技术城域网一个城市远距离无线宽带接入标准宽带无线接入标准通常称为解决城市范围内的无线宽带覆盖提供非视距传输信号可以穿透障碍物或反射传输固定无线带宽用于最后一公里接入类似无线版的不支持移动性移动采用了可扩展正交频分复用多址高速移动保持上网标准别称移动性频率范围考试关键词固定非视距固定固定无线宽带标准整合移动移动移动性时速光以太网分配带宽具有认证与授权功能支持和防火墙支持多协议标签交换计费功能中小型网络系统总体规划与设计路由器传统路由器采用共享背板带宽结构高性能路由器一般采用交换式结构路由器的服务质量主要表现在队列管理机制端口硬件队列管理和支持协议通过路由表来决定包转发路径路由器的可用性无故障连续工作时间大于万小时且系统故障恢复时间小于分钟背板或背板带宽定义是指路由器或交换机接口处理器或接口卡和数据总线间所能吞吐的最大数据量意义它代表了设备内部数据交换架构的理论物理极限您可以将其理解为设备内部的高速公路总宽度背板带宽越高意味着设备在各端口之间调度数据的能力越强路由器的吞吐量包转发能力与路由器的端口数量和速率包类型包长度有关吞吐量定义是指路由器在没有丢包的情况下单位时间内能够实际转发的最大数据量通常用包转发率即每秒转发的数据包数量或比特率来衡量意义它代表了设备在真实运行环境下的实际数据处理与转发能力您可以将其理解为这条高速公路上实际能够顺利通过的车流量路由器的吞吐量包转发能力与路由器的端口数量和速率包类型包长度有关延时与延时抖动从第一个字节进入路由器到该帧的最后一个字节离开路由器所经历的时间就是延时延时与包长度链路传输速率有关丢包率丢包率是衡量路由器超负荷工作能力的指标之一服务质量路由器的服务质量主要表现在队列管理机制调度算法拥塞管理端口硬件队列管理和协议',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-03-01 01:15:15',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 8.1.1"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">不讲道李的信息站</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://nodaoli.oss-cn-guangzhou.aliyuncs.com/HexoConfig/wechat.png?Expires=1712143119&amp;OSSAccessKeyId=TMP.3Kjf7CsgJfcDU6WG7HTpPt9tU54iSzzDuGmavA5a1c9xmkgQrDkAd3HU9Mi15cGWJCRoMFRorkMNoEWSBW7yPtZreknjGv&amp;Signature=ENNEhFHCa8bvTdP8KyVhsIMwDSM%3D" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://nodaoli.oss-cn-guangzhou.aliyuncs.com/HexoConfig/wechat.png?Expires=1712143119&amp;OSSAccessKeyId=TMP.3Kjf7CsgJfcDU6WG7HTpPt9tU54iSzzDuGmavA5a1c9xmkgQrDkAd3HU9Mi15cGWJCRoMFRorkMNoEWSBW7yPtZreknjGv&amp;Signature=ENNEhFHCa8bvTdP8KyVhsIMwDSM%3D"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://nodaoli.oss-cn-guangzhou.aliyuncs.com/HexoConfig/alipay.jpg?Expires=1712143083&amp;OSSAccessKeyId=TMP.3Kjf7CsgJfcDU6WG7HTpPt9tU54iSzzDuGmavA5a1c9xmkgQrDkAd3HU9Mi15cGWJCRoMFRorkMNoEWSBW7yPtZreknjGv&amp;Signature=tJW5oUTF8Ze531Q5EmrMepN0AJI%3D" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://nodaoli.oss-cn-guangzhou.aliyuncs.com/HexoConfig/alipay.jpg?Expires=1712143083&amp;OSSAccessKeyId=TMP.3Kjf7CsgJfcDU6WG7HTpPt9tU54iSzzDuGmavA5a1c9xmkgQrDkAd3HU9Mi15cGWJCRoMFRorkMNoEWSBW7yPtZreknjGv&amp;Signature=tJW5oUTF8Ze531Q5EmrMepN0AJI%3D"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Cloudflare/" style="font-size: 1.05rem;">Cloudflare<sup>1</sup></a><a href="/tags/ESPIDF/" style="font-size: 1.05rem;">ESPIDF<sup>3</sup></a><a href="/tags/IDEA/" style="font-size: 1.05rem;">IDEA<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 1.05rem;">JavaScript<sup>2</sup></a><a href="/tags/Ubuntu/" style="font-size: 1.05rem;">Ubuntu<sup>10</sup></a><a href="/tags/Vue/" style="font-size: 1.05rem;">Vue<sup>5</sup></a><a href="/tags/adobe/" style="font-size: 1.05rem;">adobe<sup>1</sup></a><a href="/tags/docker-compose/" style="font-size: 1.05rem;">docker-compose<sup>1</sup></a><a href="/tags/esp32s3n16r8/" style="font-size: 1.05rem;">esp32s3n16r8<sup>3</sup></a><a href="/tags/git/" style="font-size: 1.05rem;">git<sup>3</sup></a><a href="/tags/h2/" style="font-size: 1.05rem;">h2<sup>2</sup></a><a href="/tags/hexo/" style="font-size: 1.05rem;">hexo<sup>2</sup></a><a href="/tags/java/" style="font-size: 1.05rem;">java<sup>16</sup></a><a href="/tags/jellyfin/" style="font-size: 1.05rem;">jellyfin<sup>1</sup></a><a href="/tags/maven/" style="font-size: 1.05rem;">maven<sup>2</sup></a><a href="/tags/miui/" style="font-size: 1.05rem;">miui<sup>1</sup></a><a href="/tags/nextjs/" style="font-size: 1.05rem;">nextjs<sup>1</sup></a><a href="/tags/openclash/" style="font-size: 1.05rem;">openclash<sup>1</sup></a><a href="/tags/openwrt/" style="font-size: 1.05rem;">openwrt<sup>1</sup></a><a href="/tags/python/" style="font-size: 1.05rem;">python<sup>1</sup></a><a href="/tags/ros2/" style="font-size: 1.05rem;">ros2<sup>3</sup></a><a href="/tags/vscode/" style="font-size: 1.05rem;">vscode<sup>3</sup></a><a href="/tags/%E7%BE%A4%E6%99%96/" style="font-size: 1.05rem;">群晖<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/02/"><span class="card-archive-list-date">二月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">7</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/01/"><span class="card-archive-list-date">一月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">9</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/11/"><span class="card-archive-list-date">十一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">10</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/08/"><span class="card-archive-list-date">八月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/03/"><span class="card-archive-list-date">三月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/11/"><span class="card-archive-list-date">十一月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">十月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">九月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">4</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BD%91%E7%BB%9C/" itemprop="url">网络</a></span><span class="article-meta tags"></span></div></div><h1 class="post-title" itemprop="name headline">NCRE网络技术</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2026-02-20T17:40:25.000Z" title="发表于 2026-02-20 17:40:25">2026-02-20</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2026-03-01T01:15:15.477Z" title="更新于 2026-03-01 01:15:15">2026-03-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">2.3k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator"></span><span id="" data-flag-title="NCRE网络技术"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="twikoo_visitors" title="访问量"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为广西"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>广西</span><span class="post-meta-separator"></span><span class="post-meta-commentcount"><i class="anzhiyufont anzhiyu-icon-comments post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/posts/NCRE%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF.html#post-comment" tabindex="-1"><span id="twikoo-count"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></a></span></div></div></div><article class="post-content" id="article-container" itemscope itemtype="https://nodaoli.top/posts/NCRE%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF.html"><header><a class="post-meta-categories" href="/categories/%E7%BD%91%E7%BB%9C/" itemprop="url">网络</a><h1 id="CrawlerTitle" itemprop="name headline">NCRE网络技术</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">nodaoli</span><time itemprop="dateCreated datePublished" datetime="2026-02-20T17:40:25.000Z" title="发表于 2026-02-20 17:40:25">2026-02-20</time><time itemprop="dateCreated datePublished" datetime="2026-03-01T01:15:15.477Z" title="更新于 2026-03-01 01:15:15">2026-03-01</time></header><h1 id="城域网"><a href="#城域网" class="headerlink" title="城域网"></a>城域网</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://nodaoli-hexo.oss-cn-guangzhou.aliyuncs.com/202602230054986.png" alt="image.png"></p>
+<h2 id="核心层"><a href="#核心层" class="headerlink" title="核心层"></a>核心层</h2><p>核心层是城域网的最高层，负责处理大量的数据流量。核心层的设备通常是高性能的路由器和交换机，能够处理大量的数据传输。<font color="#ff0000">高速数据交换</font>。</p>
+<ul>
+<li>提供对外（互联网出口）的连接</li>
+<li>为整个城域网提供一个高速、安全与具有QoS保障能力的数据传输环境</li>
+</ul>
+<h2 id="汇聚层"><a href="#汇聚层" class="headerlink" title="汇聚层"></a>汇聚层</h2><p>汇聚层位于核心层和接入层之间，负责将接入层的流量汇聚到核心层。汇聚层的设备通常是中等性能的路由器和交换机，能够处理中等规模的流量。</p>
+<ul>
+<li>处理身份认证、计费和宽带控制</li>
+<li>流量汇聚：将多个接入层节点的数据向上透传</li>
+</ul>
+<h2 id="接入层"><a href="#接入层" class="headerlink" title="接入层"></a>接入层</h2><p>接入层是城域网的最底层，负责将终端设备（如PC、服务器等）接入网络。接入层的设备通常是交换机，能够提供多个端口供终端设备连接。</p>
+<h2 id="城域网技术描述"><a href="#城域网技术描述" class="headerlink" title="城域网技术描述"></a>城域网技术描述</h2><ul>
+<li>可以使用&#x3D;&#x3D;SNMP&#x3D;&#x3D;实现带外网络管理，利用IP网络及协议进行网络管理，<font color="#ff0000">汇聚层以上（核心交换层）带外管理，汇聚层以下（用户接入层）带内管理</font></li>
+<li>保证服务质量QoS的有：&#x3D;&#x3D;资源预留（RSVP）、区分服务（diff server）和多协议标记交换（MPLS）&#x3D;&#x3D;</li>
+</ul>
+<h1 id="技术特征"><a href="#技术特征" class="headerlink" title="技术特征"></a>技术特征</h1><h2 id="ADSL（非对称数字用户路线）"><a href="#ADSL（非对称数字用户路线）" class="headerlink" title="ADSL（非对称数字用户路线）"></a>ADSL（非对称数字用户路线）</h2><blockquote>
+<p>下行快，上行慢<br><mark style="background:#b1ffff">上行速率在64kbps~640kbps，下行速率在500kbps~7Mbps</mark></p>
+</blockquote>
+<p>使用了一个 FDM（频分复用技术）</p>
+<ol>
+<li>语音信道： 0~4kHz，用于普通电话通话。</li>
+<li>上行信道： 25kHz~200kHz（大约），用于上传数据。</li>
+<li>下行信道： 200kHz~1.1MHz（大约），用于下载数据。</li>
+</ol>
+<h2 id="Cable-Modem（电缆调制解调器）"><a href="#Cable-Modem（电缆调制解调器）" class="headerlink" title="Cable Modem（电缆调制解调器）"></a>Cable Modem（电缆调制解调器）</h2><p><mark style="background:#b1ffff">Cable Modem也是频分复用技术</mark>，将信道分为上行信道和下行信道。</p>
+<ul>
+<li>专门为用线电视网进行数据传输设计的</li>
+<li>无需拨号</li>
+<li>非对称速率：上行慢，下行快</li>
+<li>共享式带宽：用的人越多，速度越慢</li>
+</ul>
+<h2 id="MPLS（Multi-Protocol-Label-Switching，多协议标签交换）"><a href="#MPLS（Multi-Protocol-Label-Switching，多协议标签交换）" class="headerlink" title="MPLS（Multi-Protocol Label Switching，多协议标签交换）"></a>MPLS（Multi-Protocol Label Switching，多协议标签交换）</h2><blockquote>
+<p>如果把光纤比作高速公路，光以太网是公路的标准，那么 <strong>MPLS 就是一套“高速路自动收费与导航系统”</strong>。</p>
+</blockquote>
+<ol>
+<li>MPLS 的核心逻辑：不再看 IP 地址<br>传统的路由器在转发数据时，需要拆开数据包查 IP 地址，然后去庞大的路由表里一行行比对，这就像快递员每到一个分拣站都要拆开包裹看具体地址，效率较低。</li>
+</ol>
+<p>MPLS 的做法是：</p>
+<ul>
+<li>打标签（Labeling）： 在数据进入 MPLS 网络边缘时，给它贴上一个短而固定长度的标签（Label）。</li>
+<li>快速交换： 路径中间的交换机只看这个“标签”编号，查一个简单的索引表就直接甩到下一个接口。它不需要去看复杂的 IP 路由表。</li>
+</ul>
+<ol start="2">
+<li>MPLS 的技术特征</li>
+</ol>
+<ul>
+<li>“多协议” (Multi-Protocol)： 它可以承载各种协议，不仅是 IP，也可以是传统的 ATM 或帧中继（Frame Relay）。</li>
+<li>二层半协议： 在 OSI 模型中，它介于第二层（数据链路层）和第三层（网络层）之间。它在以太网帧头和 IP 头之间插入了一个 MPLS 头部。</li>
+<li>面向连接： 虽然以太网是无连接的，但 MPLS 通过建立 LSP（标签交换路径），让数据包像走铁路轨道一样，沿着预先设定的路径行驶。</li>
+</ul>
+<h2 id="HDSL（High-bit-rate-Digital-Subscriber-Line，高比特率数字用户线路）"><a href="#HDSL（High-bit-rate-Digital-Subscriber-Line，高比特率数字用户线路）" class="headerlink" title="HDSL（High-bit-rate Digital Subscriber Line，高比特率数字用户线路）"></a>HDSL（High-bit-rate Digital Subscriber Line，高比特率数字用户线路）</h2><blockquote>
+<p>对称传输，上下行对等，<font color="#ff0000">利用2到3对双绞线</font><br>上行传输速率最大可以达到1.5544Mbps</p>
+</blockquote>
+<h2 id="VDSH（Very-higt-bit-rate-Digital-Subscriber-Line）"><a href="#VDSH（Very-higt-bit-rate-Digital-Subscriber-Line）" class="headerlink" title="VDSH（Very-higt-bit-rate Digital Subscriber Line）"></a>VDSH（Very-higt-bit-rate Digital Subscriber Line）</h2><blockquote>
+<p>非对称带宽特性<br>上行速率为2.3Mbps，下行速率为51Mbps</p>
+</blockquote>
+<h2 id="RPR环"><a href="#RPR环" class="headerlink" title="RPR环"></a>RPR环</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://nodaoli-hexo.oss-cn-guangzhou.aliyuncs.com/202602230054766.png" alt="image.png"></p>
+<ul>
+<li>50ms实现自愈</li>
+<li>方向性<ul>
+<li>外环（Outer Ring）：顺时针方向传输数据分组</li>
+<li>内环（Inner Ring）：逆时针方向传输数据分组</li>
+<li>RPR同时利用这两个环来传输数据和控制信息，带宽利用率极高。</li>
+</ul>
+</li>
+<li>带宽共享</li>
+<li>SRP公平算法：RPR 能够自动调节各个节点的发送速率，防止某个节点占用过多带宽导致其他节点“饿死”。</li>
+<li><strong>目的节点剥离：</strong> 在 RPR 环中，数据帧由源节点发出，<strong>由目的节点从环上剥离</strong>。</li>
+</ul>
+<h2 id="HFC（Hybrid-Fiber-Coaxial，混合光纤同轴电缆网）"><a href="#HFC（Hybrid-Fiber-Coaxial，混合光纤同轴电缆网）" class="headerlink" title="HFC（Hybrid Fiber-Coaxial，混合光纤同轴电缆网）"></a>HFC（Hybrid Fiber-Coaxial，混合光纤同轴电缆网）</h2><blockquote>
+<p>简单来说，HFC 就是把**光纤（Fiber）<strong>和</strong>同轴电缆（Coaxial）**结合起来的宽带接入技术。</p>
+</blockquote>
+<ul>
+<li>共享带宽：同一个光节点下的所有用户<strong>共享</strong>一条下行带宽，<mark style="background:#b1ffff">与ADSL（独享）最大的区别</mark></li>
+<li>频率划分<ul>
+<li><strong>上行信道：</strong> 5MHz - 42MHz（用于上传）。</li>
+<li><strong>电视信道：</strong> 50MHz - 550MHz（用于看电视）。</li>
+<li><strong>下行数据信道：</strong> 550MHz 以上（用于下载上网数据）。</li>
+</ul>
+</li>
+<li><strong>非对称性：</strong> 下行速率（最高可达 40Mbps 甚至更高）远大于上行速率。</li>
+<li>双向传输系统</li>
+</ul>
+<h1 id="传输速率"><a href="#传输速率" class="headerlink" title="传输速率"></a>传输速率</h1><h2 id="OC速率"><a href="#OC速率" class="headerlink" title="OC速率"></a>OC速率</h2><p>$OC-1 &#x3D; 51.84 \text{ Mbps}$<br>OC-n &#x3D; $n \times 51.84$</p>
+<h1 id="中继距离"><a href="#中继距离" class="headerlink" title="中继距离"></a>中继距离</h1><table>
+<thead>
+<tr>
+<th><strong>技术类型</strong></th>
+<th><strong>传输介质</strong></th>
+<th><strong>典型中继&#x2F;传输距离</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>五类线 (以太网)</strong></td>
+<td>双绞线</td>
+<td><strong>$100 \text{ m}$</strong></td>
+</tr>
+<tr>
+<td><strong>ADSL &#x2F; HDSL</strong></td>
+<td>电话铜线</td>
+<td><strong>$3 \sim 5 \text{ km}$</strong></td>
+</tr>
+<tr>
+<td><strong>HFC (电缆)</strong></td>
+<td>同轴电缆</td>
+<td>需频繁使用放大器，通常几公里</td>
+</tr>
+<tr>
+<td><strong>单模光纤 (SDH)</strong></td>
+<td>光纤</td>
+<td><strong>$100 \text{ km}$ 以上</strong></td>
+</tr>
+</tbody></table>
+<h1 id="传输协议"><a href="#传输协议" class="headerlink" title="传输协议"></a>传输协议</h1><h2 id="802"><a href="#802" class="headerlink" title="802"></a>802</h2><h3 id="个人局域网（WPAN）——“近身距离”"><a href="#个人局域网（WPAN）——“近身距离”" class="headerlink" title="个人局域网（WPAN）——“近身距离”"></a>个人局域网（WPAN）——“近身距离”</h3><ul>
+<li><strong>802.15</strong>：无线个人个域网标准。<ul>
+<li><strong>802.15.1</strong>：蓝牙 (Bluetooth)。</li>
+<li><strong>802.15.4</strong>：低速率无线个域网（ZigBee 的底层），你玩 ESP32 搞传感器网络时常接触。</li>
+</ul>
+</li>
+</ul>
+<h3 id="局域网（LAN）——“一栋楼-一个校园”"><a href="#局域网（LAN）——“一栋楼-一个校园”" class="headerlink" title="局域网（LAN）——“一栋楼&#x2F;一个校园”"></a>局域网（LAN）——“一栋楼&#x2F;一个校园”</h3><ul>
+<li><strong>802.3</strong>：<strong>以太网 (Ethernet)</strong> 标准。这是有线网络的基石。<ul>
+<li>衍生考点：802.3u (快速以太网&#x2F;100Mbps)、802.3z (千兆以太网)。</li>
+</ul>
+</li>
+<li><strong>802.11</strong>：<strong>无线局域网 (WLAN)</strong> 标准，即 Wi-Fi。<ul>
+<li>成员：802.11a&#x2F;b&#x2F;g&#x2F;n&#x2F;ac&#x2F;ax。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>b 是最垃圾的 2.4GHz 11Mbps<br>a 升级到5GHz 54Mbps<br>g 就是b提升到了a的速率 2.4GHz 54Mbps<br>n WIFI4，双频，多输入多输出（MIMO）<br>ac WIFI5，只支持5GHz MU-MIMO技术<br>ax WIFI6，双频，理论9.6Gbps，OFDMA技术</p>
+</blockquote>
+<h3 id="城域网（MAN）——“一个城市”"><a href="#城域网（MAN）——“一个城市”" class="headerlink" title="城域网（MAN）——“一个城市”"></a>城域网（MAN）——“一个城市”</h3><p>&#x3D;&#x3D;远距离无线宽带接入标准&#x3D;&#x3D;</p>
+<ul>
+<li><strong>802.16</strong>：宽带无线接入标准，通常称为 <strong>WiMAX</strong>。解决城市范围内的无线宽带覆盖。<ul>
+<li>a：提供<strong>非视距（NLOS）传输</strong>，信号可以穿透障碍物或反射传输。</li>
+<li>d：固定无线带宽，用于<font color="#ff0000">“最后一公里”</font>接入，类似无线版的ADSL。<font color="#ff0000">不支持移动性。</font></li>
+<li>e：移动WiMAX。采用了<strong>SOFDMA</strong>（可扩展正交频分复用多址）。高速移动保持上网</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>标准</strong></th>
+<th><strong>别称</strong></th>
+<th><strong>移动性</strong></th>
+<th><strong>频率范围</strong></th>
+<th><strong>考试关键词</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>802.16a</strong></td>
+<td>-</td>
+<td>固定</td>
+<td>2-11 GHz</td>
+<td><strong>非视距 (NLOS)</strong></td>
+</tr>
+<tr>
+<td><strong>802.16d</strong></td>
+<td>802.16-2004</td>
+<td><strong>固定</strong></td>
+<td>2-11 GHz</td>
+<td><strong>固定</strong>无线宽带、标准整合</td>
+</tr>
+<tr>
+<td><strong>802.16e</strong></td>
+<td><strong>移动 WiMAX</strong></td>
+<td><strong>移动</strong></td>
+<td>2-6 GHz</td>
+<td><strong>移动性</strong>、时速 120km、SOFDMA</td>
+</tr>
+</tbody></table>
+<h1 id="光以太网"><a href="#光以太网" class="headerlink" title="光以太网"></a>光以太网</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://nodaoli-hexo.oss-cn-guangzhou.aliyuncs.com/202602252145029.png" alt="image.png"></p>
+<ul>
+<li>分配带宽</li>
+<li>具有认证与授权功能</li>
+<li>支持VPN和防火墙</li>
+<li>支持MPLS（多协议标签交换）</li>
+<li>计费功能</li>
+</ul>
+<h1 id="中小型网络系统总体规划与设计"><a href="#中小型网络系统总体规划与设计" class="headerlink" title="中小型网络系统总体规划与设计"></a>中小型网络系统总体规划与设计</h1><h1 id="路由器"><a href="#路由器" class="headerlink" title="路由器"></a>路由器</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://nodaoli-hexo.oss-cn-guangzhou.aliyuncs.com/202602260257863.png" alt="路由器核心知识点信息图.png"></p>
+<ul>
+<li>传统路由器采用共享背板带宽结构，高性能路由器（40Gbit&#x2F;s）一般采用<font color="#ff0000">交换式结构</font></li>
+<li>路由器的服务质量主要表现在队列管理机制、端口硬件队列管理和支持QoS协议</li>
+<li>通过路由表来决定包转发路径</li>
+<li>路由器的可用性&#x3D;无故障连续工作时间（MTBF）大于 10万 小时，且系统故障恢复时间小于 30分钟</li>
+</ul>
+<h2 id="背板（或背板带宽，Backplane-Bandwidth）"><a href="#背板（或背板带宽，Backplane-Bandwidth）" class="headerlink" title="背板（或背板带宽，Backplane Bandwidth）"></a>背板（或背板带宽，Backplane Bandwidth）</h2><p>• <strong>定义</strong>：是指路由器或交换机接口处理器（或接口卡）和数据总线间所能吞吐的最大数据量。</p>
+<p>• <strong>意义</strong>：它代表了设备内部数据交换架构的<strong>理论物理极限</strong>。您可以将其理解为设备内部的“高速公路总宽度”。背板带宽越高，意味着设备在各端口之间调度数据的能力越强。</p>
+<blockquote>
+<p> 路由器的吞吐量（包转发能力）与路由器的端口数量和速率、包类型、包长度有关</p>
+</blockquote>
+<h2 id="吞吐量-（Throughput）"><a href="#吞吐量-（Throughput）" class="headerlink" title="吞吐量**（Throughput）**"></a>吞吐量**（Throughput）**</h2><p>• <strong>定义</strong>：是指路由器在没有丢包的情况下，单位时间内能够实际转发的最大数据量。通常用包转发率（pps，即每秒转发的数据包数量）或比特率（bps）来衡量。<br>• <strong>意义</strong>：它代表了设备在真实运行环境下的<strong>实际数据处理与转发能力</strong>。您可以将其理解为这条高速公路上“实际能够顺利通过的车流量”。</p>
+<blockquote>
+<p>路由器的吞吐量（包转发能力）与路由器的端口数量和速率、包类型、包长度有关</p>
+</blockquote>
+<h2 id="延时与延时抖动"><a href="#延时与延时抖动" class="headerlink" title="延时与延时抖动"></a>延时与延时抖动</h2><ul>
+<li>从第一个字节进入路由器，到该帧的最后一个字节离开路由器所经历的时间就是延时</li>
+<li>延时与包长度、链路传输速率有关</li>
+</ul>
+<h2 id="丢包率"><a href="#丢包率" class="headerlink" title="丢包率"></a>丢包率</h2><ul>
+<li>丢包率是衡量路由器超负荷工作能力的指标之一</li>
+</ul>
+<h2 id="服务质量"><a href="#服务质量" class="headerlink" title="服务质量"></a>服务质量</h2><ul>
+<li>路由器的服务质量主要表现在队列管理机制（调度算法，拥塞管理）、端口硬件队列管理和QoS协议</li>
+</ul>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/av.png" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/av.png" title="头像" alt="头像"></a><div class="post-copyright__author_name">nodaoli</div><div class="post-copyright__author_desc">小李小李，不讲道李</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://nodaoli.top/posts/NCRE%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF.html">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://nodaoli.top/posts/NCRE%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF.html')">NCRE网络技术</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://nodaoli.oss-cn-guangzhou.aliyuncs.com/HexoConfig/wechat.png?Expires=1712143119&amp;OSSAccessKeyId=TMP.3Kjf7CsgJfcDU6WG7HTpPt9tU54iSzzDuGmavA5a1c9xmkgQrDkAd3HU9Mi15cGWJCRoMFRorkMNoEWSBW7yPtZreknjGv&amp;Signature=ENNEhFHCa8bvTdP8KyVhsIMwDSM%3D" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://nodaoli.oss-cn-guangzhou.aliyuncs.com/HexoConfig/wechat.png?Expires=1712143119&amp;OSSAccessKeyId=TMP.3Kjf7CsgJfcDU6WG7HTpPt9tU54iSzzDuGmavA5a1c9xmkgQrDkAd3HU9Mi15cGWJCRoMFRorkMNoEWSBW7yPtZreknjGv&amp;Signature=ENNEhFHCa8bvTdP8KyVhsIMwDSM%3D" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://nodaoli.oss-cn-guangzhou.aliyuncs.com/HexoConfig/alipay.jpg?Expires=1712143083&amp;OSSAccessKeyId=TMP.3Kjf7CsgJfcDU6WG7HTpPt9tU54iSzzDuGmavA5a1c9xmkgQrDkAd3HU9Mi15cGWJCRoMFRorkMNoEWSBW7yPtZreknjGv&amp;Signature=tJW5oUTF8Ze531Q5EmrMepN0AJI%3D" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://nodaoli.oss-cn-guangzhou.aliyuncs.com/HexoConfig/alipay.jpg?Expires=1712143083&amp;OSSAccessKeyId=TMP.3Kjf7CsgJfcDU6WG7HTpPt9tU54iSzzDuGmavA5a1c9xmkgQrDkAd3HU9Mi15cGWJCRoMFRorkMNoEWSBW7yPtZreknjGv&amp;Signature=tJW5oUTF8Ze531Q5EmrMepN0AJI%3D" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://nodaoli.top/posts/NCRE%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF.html"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=undefined&amp;url=https://nodaoli.top/posts/NCRE%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF.html&amp;pic=undefined" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://nodaoli.top" target="_blank">不讲道李的信息站</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"></div></div></div><div class="post_share"><div class="social-share" data-image="/img/av.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/posts/%F0%9F%9A%80%20WSL%202%20%E6%95%91%E6%98%9F%EF%BC%9A5%E5%88%86%E9%92%9F%E6%90%9E%E5%AE%9A%20USB%20%E8%AE%BE%E5%A4%87%E7%A9%BF%E9%80%8F%20(usbipd-win%20%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97).html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">🚀 WSL 2 救星：5分钟搞定 USB 设备穿透 (usbipd-win 快速上手指南)</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)" style="display: none">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/av.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">产品、设计、开发</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">nodaoli</h1><div class="author-info__desc">小李小李，不讲道李</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/icewolf-li" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/672570334" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%8E%E5%9F%9F%E7%BD%91"><span class="toc-number">1.</span> <span class="toc-text">城域网</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E5%B1%82"><span class="toc-number">1.1.</span> <span class="toc-text">核心层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B1%87%E8%81%9A%E5%B1%82"><span class="toc-number">1.2.</span> <span class="toc-text">汇聚层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%85%A5%E5%B1%82"><span class="toc-number">1.3.</span> <span class="toc-text">接入层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%8E%E5%9F%9F%E7%BD%91%E6%8A%80%E6%9C%AF%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.4.</span> <span class="toc-text">城域网技术描述</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E7%89%B9%E5%BE%81"><span class="toc-number">2.</span> <span class="toc-text">技术特征</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ADSL%EF%BC%88%E9%9D%9E%E5%AF%B9%E7%A7%B0%E6%95%B0%E5%AD%97%E7%94%A8%E6%88%B7%E8%B7%AF%E7%BA%BF%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">ADSL（非对称数字用户路线）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cable-Modem%EF%BC%88%E7%94%B5%E7%BC%86%E8%B0%83%E5%88%B6%E8%A7%A3%E8%B0%83%E5%99%A8%EF%BC%89"><span class="toc-number">2.2.</span> <span class="toc-text">Cable Modem（电缆调制解调器）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MPLS%EF%BC%88Multi-Protocol-Label-Switching%EF%BC%8C%E5%A4%9A%E5%8D%8F%E8%AE%AE%E6%A0%87%E7%AD%BE%E4%BA%A4%E6%8D%A2%EF%BC%89"><span class="toc-number">2.3.</span> <span class="toc-text">MPLS（Multi-Protocol Label Switching，多协议标签交换）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HDSL%EF%BC%88High-bit-rate-Digital-Subscriber-Line%EF%BC%8C%E9%AB%98%E6%AF%94%E7%89%B9%E7%8E%87%E6%95%B0%E5%AD%97%E7%94%A8%E6%88%B7%E7%BA%BF%E8%B7%AF%EF%BC%89"><span class="toc-number">2.4.</span> <span class="toc-text">HDSL（High-bit-rate Digital Subscriber Line，高比特率数字用户线路）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VDSH%EF%BC%88Very-higt-bit-rate-Digital-Subscriber-Line%EF%BC%89"><span class="toc-number">2.5.</span> <span class="toc-text">VDSH（Very-higt-bit-rate Digital Subscriber Line）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RPR%E7%8E%AF"><span class="toc-number">2.6.</span> <span class="toc-text">RPR环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HFC%EF%BC%88Hybrid-Fiber-Coaxial%EF%BC%8C%E6%B7%B7%E5%90%88%E5%85%89%E7%BA%A4%E5%90%8C%E8%BD%B4%E7%94%B5%E7%BC%86%E7%BD%91%EF%BC%89"><span class="toc-number">2.7.</span> <span class="toc-text">HFC（Hybrid Fiber-Coaxial，混合光纤同轴电缆网）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%A0%E8%BE%93%E9%80%9F%E7%8E%87"><span class="toc-number">3.</span> <span class="toc-text">传输速率</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#OC%E9%80%9F%E7%8E%87"><span class="toc-number">3.1.</span> <span class="toc-text">OC速率</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%AD%E7%BB%A7%E8%B7%9D%E7%A6%BB"><span class="toc-number">4.</span> <span class="toc-text">中继距离</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE"><span class="toc-number">5.</span> <span class="toc-text">传输协议</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#802"><span class="toc-number">5.1.</span> <span class="toc-text">802</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AA%E4%BA%BA%E5%B1%80%E5%9F%9F%E7%BD%91%EF%BC%88WPAN%EF%BC%89%E2%80%94%E2%80%94%E2%80%9C%E8%BF%91%E8%BA%AB%E8%B7%9D%E7%A6%BB%E2%80%9D"><span class="toc-number">5.1.1.</span> <span class="toc-text">个人局域网（WPAN）——“近身距离”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%80%E5%9F%9F%E7%BD%91%EF%BC%88LAN%EF%BC%89%E2%80%94%E2%80%94%E2%80%9C%E4%B8%80%E6%A0%8B%E6%A5%BC-%E4%B8%80%E4%B8%AA%E6%A0%A1%E5%9B%AD%E2%80%9D"><span class="toc-number">5.1.2.</span> <span class="toc-text">局域网（LAN）——“一栋楼&#x2F;一个校园”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%8E%E5%9F%9F%E7%BD%91%EF%BC%88MAN%EF%BC%89%E2%80%94%E2%80%94%E2%80%9C%E4%B8%80%E4%B8%AA%E5%9F%8E%E5%B8%82%E2%80%9D"><span class="toc-number">5.1.3.</span> <span class="toc-text">城域网（MAN）——“一个城市”</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%89%E4%BB%A5%E5%A4%AA%E7%BD%91"><span class="toc-number">6.</span> <span class="toc-text">光以太网</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%AD%E5%B0%8F%E5%9E%8B%E7%BD%91%E7%BB%9C%E7%B3%BB%E7%BB%9F%E6%80%BB%E4%BD%93%E8%A7%84%E5%88%92%E4%B8%8E%E8%AE%BE%E8%AE%A1"><span class="toc-number">7.</span> <span class="toc-text">中小型网络系统总体规划与设计</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E5%99%A8"><span class="toc-number">8.</span> <span class="toc-text">路由器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%8C%E6%9D%BF%EF%BC%88%E6%88%96%E8%83%8C%E6%9D%BF%E5%B8%A6%E5%AE%BD%EF%BC%8CBackplane-Bandwidth%EF%BC%89"><span class="toc-number">8.1.</span> <span class="toc-text">背板（或背板带宽，Backplane Bandwidth）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%9E%E5%90%90%E9%87%8F-%EF%BC%88Throughput%EF%BC%89"><span class="toc-number">8.2.</span> <span class="toc-text">吞吐量**（Throughput）**</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%B6%E6%97%B6%E4%B8%8E%E5%BB%B6%E6%97%B6%E6%8A%96%E5%8A%A8"><span class="toc-number">8.3.</span> <span class="toc-text">延时与延时抖动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%A2%E5%8C%85%E7%8E%87"><span class="toc-number">8.4.</span> <span class="toc-text">丢包率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E8%B4%A8%E9%87%8F"><span class="toc-number">8.5.</span> <span class="toc-text">服务质量</span></a></li></ol></li></ol></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.shields.io/badge/nodaoli-%E4%B8%8A%E7%8F%AD%E6%91%B8%E9%B1%BC%E4%B8%AD-green/?style=social" alt="距离月入10k也就还差一个大佬带我~" title="距离月入10k也就还差一个大佬带我~"/><div id="runtimeTextTip"></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2023 - 2026 By <a class="footer-bar-link" href="/" title="nodaoli" target="_blank">nodaoli</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">103</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">23</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">33</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://nodaoli.top/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Cloudflare/" style="font-size: 0.88rem; color: rgb(160, 84, 75);">Cloudflare<sup>1</sup></a><a href="/tags/ESPIDF/" style="font-size: 0.88rem; color: rgb(198, 68, 108);">ESPIDF<sup>3</sup></a><a href="/tags/IDEA/" style="font-size: 0.88rem; color: rgb(31, 124, 135);">IDEA<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 0.88rem; color: rgb(61, 101, 47);">JavaScript<sup>2</sup></a><a href="/tags/Ubuntu/" style="font-size: 0.88rem; color: rgb(167, 156, 124);">Ubuntu<sup>10</sup></a><a href="/tags/Vue/" style="font-size: 0.88rem; color: rgb(182, 149, 135);">Vue<sup>5</sup></a><a href="/tags/adobe/" style="font-size: 0.88rem; color: rgb(128, 7, 164);">adobe<sup>1</sup></a><a href="/tags/docker-compose/" style="font-size: 0.88rem; color: rgb(161, 82, 4);">docker-compose<sup>1</sup></a><a href="/tags/esp32s3n16r8/" style="font-size: 0.88rem; color: rgb(105, 159, 183);">esp32s3n16r8<sup>3</sup></a><a href="/tags/git/" style="font-size: 0.88rem; color: rgb(46, 26, 115);">git<sup>3</sup></a><a href="/tags/h2/" style="font-size: 0.88rem; color: rgb(5, 23, 181);">h2<sup>2</sup></a><a href="/tags/hexo/" style="font-size: 0.88rem; color: rgb(185, 77, 180);">hexo<sup>2</sup></a><a href="/tags/java/" style="font-size: 0.88rem; color: rgb(126, 162, 102);">java<sup>16</sup></a><a href="/tags/jellyfin/" style="font-size: 0.88rem; color: rgb(39, 167, 200);">jellyfin<sup>1</sup></a><a href="/tags/maven/" style="font-size: 0.88rem; color: rgb(121, 88, 174);">maven<sup>2</sup></a><a href="/tags/miui/" style="font-size: 0.88rem; color: rgb(123, 146, 34);">miui<sup>1</sup></a><a href="/tags/nextjs/" style="font-size: 0.88rem; color: rgb(127, 120, 64);">nextjs<sup>1</sup></a><a href="/tags/openclash/" style="font-size: 0.88rem; color: rgb(140, 92, 178);">openclash<sup>1</sup></a><a href="/tags/openwrt/" style="font-size: 0.88rem; color: rgb(140, 179, 27);">openwrt<sup>1</sup></a><a href="/tags/python/" style="font-size: 0.88rem; color: rgb(112, 171, 6);">python<sup>1</sup></a><a href="/tags/ros2/" style="font-size: 0.88rem; color: rgb(64, 13, 115);">ros2<sup>3</sup></a><a href="/tags/vscode/" style="font-size: 0.88rem; color: rgb(52, 59, 157);">vscode<sup>3</sup></a><a href="/tags/%E7%BE%A4%E6%99%96/" style="font-size: 0.88rem; color: rgb(60, 188, 51);">群晖<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/03/2023 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2023 By 安知鱼 V1.6.15",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 nodaoli 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("04/03/2023 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "https://img.shields.io/badge/nodaoli-%E4%B8%8B%E7%8F%AD%E5%95%A6-green/?style=social";
+        img.title = "下班了就该开开心心的玩耍，嘿嘿~";
+        img.alt = "下班了就该开开心心的玩耍，嘿嘿~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://blog-twikoo.nodaoli.top',
+      region: '',
+      onCommentLoaded: () => {
+        anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(runFn,0)
+    else getScript('https://cdn.cbd.int/twikoo@1.6.44/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://blog-twikoo.nodaoli.top',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const runFn = () => {
+    init();
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://blog-twikoo.nodaoli.top',
+        region: '',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.cbd.int/twikoo@1.6.44/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'><div class='name'><span>${array[i].nick} </span></div></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://cdn.cbd.int/qrcodejs@1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:type\"]","meta[property=\"og:site_name\"]","meta[property=\"og:description\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
